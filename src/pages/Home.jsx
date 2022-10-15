@@ -16,7 +16,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [count,setCount] = useState(0);
 
-  const {allData,loading} = useFetch();
+  const {allData} = useFetch();
 
   const searcher = (e) => {
     setSearch(e.target.value)
