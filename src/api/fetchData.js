@@ -1,7 +1,8 @@
 import axios from "axios";
+const URLAPI = 'https://testing-agriglobal-market.ue.r.appspot.com/api/getproducts/admisiones'
 
 const fetchData = () => {
-    return axios.get(process.env.URL_GENERAL_TESTING_AGM)
+    return axios.get(URLAPI)
 };
 
 export default fetchData;
