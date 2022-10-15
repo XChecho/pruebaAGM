@@ -504,8 +504,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .col-auto {
   grid-column: auto;
+}
+
+.m-0 {
+  margin: 0px;
 }
 
 .mx-3 {
@@ -564,8 +572,12 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
+.-mt-32 {
+  margin-top: -8rem;
+}
+
+.-mt-\[425px\] {
+  margin-top: -425px;
 }
 
 .flex {
@@ -592,6 +604,22 @@ video {
   height: 2.25rem;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[337px\] {
+  height: 337px;
+}
+
 .w-\[280px\] {
   width: 280px;
 }
@@ -608,12 +636,24 @@ video {
   width: 75%;
 }
 
+.w-3\/12 {
+  width: 25%;
+}
+
 .w-64 {
   width: 16rem;
 }
 
-.w-3\/12 {
-  width: 25%;
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .grid-cols-3 {
@@ -622,10 +662,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .items-center {
@@ -638,10 +674,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .self-center {
@@ -692,9 +724,24 @@ video {
   background-color: rgb(214 231 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-800 {
+.bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+  background-color: rgb(214 231 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E5E5E5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
+.bg-offback {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .py-2 {
@@ -849,6 +896,11 @@ video {
   color: rgba(16,18,28,.7);
 }
 
+.text-\[\#07074D\] {
+  --tw-text-opacity: 1;
+  color: rgb(7 7 77 / var(--tw-text-opacity));
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -912,6 +964,18 @@ body {
     margin-top: 2rem;
   }
 
+  .md\:-mt-\[6\.8125rem\] {
+    margin-top: -6.8125rem;
+  }
+
+  .md\:ml-28 {
+    margin-left: 7rem;
+  }
+
+  .md\:h-\[376px\] {
+    height: 376px;
+  }
+
   .md\:w-\[140px\] {
     width: 140px;
   }
@@ -937,5 +1001,20 @@ body {
 
   .md\:pl-14 {
     padding-left: 3.5rem;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:max-w-screen-2xl {
+    max-width: 1536px;
   }
 }
