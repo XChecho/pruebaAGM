@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 //Containers
 import CardList from '../containers/CardList'
 import FiltersList from '../containers/FiltersList'
+import CategoriesList from '../containers/CategoriesList';
 
 //Hooks
 import useFetch from '../hooks/useFetchData';
@@ -31,21 +32,21 @@ const Home = () => {
 
   const resdata = !search ? allData : allData.filter((data)=>data.title.toLowerCase().includes(search.toLowerCase()))
   const pagdata = resdata.slice(count,count+9);
-
+  
     return (
-    <div className='bg-offback -mt-[425px] md:-mt-[6.8125rem] '>
-      <div className='w-full h-[200px] md:h-[376px] -mt-32'>
-        <img src={bannerImage} alt="" className='absolute mt-2 h-[337px] w-full object-cover'/>
+    <div>
+      <div className='w-full h-[376px]'>
+        <img src={bannerImage} alt="" className='absolute h-[337px] w-full object-cover'/>
       </div>
       <div>
-        <h2 className='font-bold md:text-5xl text-primary text-left md:ml-28'>Categories</h2>
+        <h2 className='font-bold text-5xl text-primary text-left ml-28'>Categories</h2>
       </div>
-      <section className='flex flex-col pb-3 md:pb-0 false 2xl:max-w-screen-2xl'>
-
+      <section className='flex flex-col pb-0'>
+        <CategoriesList/>
       </section>
-      <section className='flex flex-col md:flex-row pb-6 -mt-1'>
+      <section className='flex flex-row pb-6 mt-1'>
         <FiltersList search={search} searcher={searcher}/>
-        <CardList pagdata={pagdata} resdata={resdata} search={search} avPage={avPage} rePage={rePage} count={count}/>
+        <CardList pagdata={pagdata} resdata={resdata} searcher={searcher} avPage={avPage} rePage={rePage} count={count}/>
       </section>  
     </div>
   )
