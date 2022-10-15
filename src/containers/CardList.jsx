@@ -25,7 +25,7 @@ const CardList = ({pagdata,resdata,searcher,avPage,rePage,count}) => {
             </button>
             <button onClick={searcher} value={""} className='px-3 py-2 bg-primary border-2 border-second rounded-[30px] w-[140px] text-second text-center text-semibold text-sm ml-10'>Clear Filters</button>
         </div>
-        <div className='grid grid-cols-3 col-auto mt-10'>
+        <div className='grid grid-cols-3 items-center mt-10'>
                 {pagdata.map(product => {
                     return <ItemCardsList product = {product} key={product.id}/>
                 })}

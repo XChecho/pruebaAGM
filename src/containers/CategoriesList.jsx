@@ -5,7 +5,7 @@ import CategoryCards from '../components/CategoryCards'
 
 const CategoriesList = () => {
   return (
-    <div className='flex place-content-around'>
+    <div className='flex place-content-around mb-16'>
         <CategoryCards/>
         <CategoryCards/>
         <CategoryCards/>
